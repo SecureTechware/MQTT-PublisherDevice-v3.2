@@ -39,7 +39,7 @@
 /*GPS init*/
 #define RXD2 16
 #define TXD2 17
-HardwareSerial neogps(1);
+HardwareSerial neogps(2);
 TinyGPSPlus gps;
 /*End GPS init*/
 
@@ -131,8 +131,8 @@ void setup()
 {
   Serial.begin(115200); //baud rate 
 
-  setupGSM(); //initialize and configure a GSM modem
-  mqttconnect();
+ // setupGSM(); //initialize and configure a GSM modem
+ // mqttconnect();
 
   pinMode(CS, OUTPUT);  
   // Initialize MCP2515 running at MCP_8MHZ or MCP_16MHZ with a baudrate of 500kb/s and the masks and filters disabled.
