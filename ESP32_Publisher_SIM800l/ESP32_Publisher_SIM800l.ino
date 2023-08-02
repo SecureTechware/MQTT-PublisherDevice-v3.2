@@ -29,7 +29,6 @@
  */
 #define TINY_GSM_MODEM_SIM800 // Define SIM Module
 //Libraries to include 
-#include <WiFi.h>
 #include <PubSubClient.h> // https://github.com/knolleary/pubsubclient
 #include <mcp_can.h>  // https://github.com/coryjfowler/MCP_CAN_lib
 #include <SPI.h>
@@ -51,9 +50,6 @@ unsigned char rxBuf[8]; // Default Buffer Size
 #define CS 5  // Define CS PIN
 MCP_CAN CAN0(CS);  // Initialize MCP_CAN                              
 
-//WiFi Connection
-const char* ssid = "SecureTechware2"; 
-const char* password = "$7001123";
 //MQTT Server Connection
 #define mqtt_server "broker.hivemq.com"
 #define owner "ArsalanSaleemSecureTechwarePublisher_3_2"
